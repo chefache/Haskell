@@ -44,3 +44,5 @@ takeFirst100MultiplyersOf5 = take 100[5,20..] -- return 5,20,35,50,65....1490
 cycleArr = take 15 (cycle [1,2,3,4]) -- it wil return [1,2,3,4,1,2,3,4,1,2,3,4,1,2,3]
 
 repeatArr = take 10(repeat 5) -- it will return [5,5,5,5,5,5,5,5,5,5]
+
+comperhensionList  = [10 * x | x <- [1..100]] -- it will return all numbers from 1 to 100 multyplied by 10
