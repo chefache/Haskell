@@ -63,4 +63,14 @@ boomBangs2 xs = [ if x `mod` 2 == 0 then "Even!" else "Odd!" | x <- xs] -- it wi
 
 -- [ x*y | x <- [2,5,10], y <- [8,10,11], x*y > 50] -- it will return a list of all posible combinations wich are even [16,20,22,40,50,80,100,110]
 
+-- list comprehension that combines a list of adjectives and a list of nouns
+-- let nouns = ["hobo","frog","pope"]
+-- let adjectives = ["lazy","grouchy","scheming"]
+-- [adjective ++ " " ++ noun | adjective <- adjectives, noun <- nouns] 
 
+
+removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']] -- Takes a string and removes everything except uppercase letters from it.
+
+
+-- let xxs = [[1,3,5,2,3,1,2,4,5],[1,2,3,4,5,6,7,8,9],[1,2,4,2,1,6,3,1,3,2,3,6]]
+-- [ [ x | x <- xs, even x ] | xs <- xxs] -- Remove all odd numbers without flattening the list.
