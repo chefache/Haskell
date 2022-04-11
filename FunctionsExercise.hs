@@ -46,3 +46,21 @@ cycleArr = take 15 (cycle [1,2,3,4]) -- it wil return [1,2,3,4,1,2,3,4,1,2,3,4,1
 repeatArr = take 10(repeat 5) -- it will return [5,5,5,5,5,5,5,5,5,5]
 
 comperhensionList  = [10 * x | x <- [1..100]] -- it will return all numbers from 1 to 100 multyplied by 10
+
+-- [x*2 | x <- [1..10], x*2 >= 12]  -- it will return [12,14,16,18,20]
+
+-- [ x | x <- [50..100], x `mod` 7 == 3]  --it will return [52,59,66,73,80,87,94]
+
+boomBangs xs = [ if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]
+
+boomBangs2 xs = [ if x `mod` 2 == 0 then "Even!" else "Odd!" | x <- xs] -- it will retrurn numbers from 1 to 100 like Odd and Even string
+
+-- [ x | x <- [1..100], x `mod` 2 == 0] -- it will return all even numbers from 1 to 100
+
+-- [ x | x <- [10..20], x /= 13, x /= 15, x /= 19] -- it will return all numbers from 10 to 20 wich are not 13, 15, 19
+
+-- [ x*y | x <- [2,5,10], y <- [8,10,11]]  -- it will return a list of all posible combinations [16,20,22,40,50,55,80,100,110] 
+
+-- [ x*y | x <- [2,5,10], y <- [8,10,11], x*y > 50] -- it will return a list of all posible combinations wich are even [16,20,22,40,50,80,100,110]
+
+
