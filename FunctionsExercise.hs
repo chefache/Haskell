@@ -74,3 +74,13 @@ removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']] -- Takes a string an
 
 -- let xxs = [[1,3,5,2,3,1,2,4,5],[1,2,3,4,5,6,7,8,9],[1,2,4,2,1,6,3,1,3,2,3,6]]
 -- [ [ x | x <- xs, even x ] | xs <- xxs] -- Remove all odd numbers without flattening the list.
+
+numberOfEs s = sum [1 | x <- s, x == 'e'] -- return number of 'e' in the given string s
+
+noSpaces s = [x | x <- s, x /= ' '] -- return given string with no spaces betwean the words
+
+betwean a b c = [x | x <- c, x > a, x < b ] -- input: betwean 2 5 [1,2,3,4,5,6] output: [3,4]
+-- x output
+-- c given list
+-- a which needs to be greater than x
+-- b which needs to be smaller than x
