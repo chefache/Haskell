@@ -84,3 +84,9 @@ betwean a b c = [x | x <- c, x > a, x < b ] -- input: betwean 2 5 [1,2,3,4,5,6] 
 -- c given list
 -- a which needs to be greater than x
 -- b which needs to be smaller than x
+
+tupleOfTuples = (("Stefan", 23), ("Ivan", 44))
+
+triangles = [ (a,b,c) | c <- [1..10], b <- [1..10], a <- [1..10] ] --all triangles with sides equal to or smaller than 10
+
+rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2] --add a condition that they all have to be right triangles.
