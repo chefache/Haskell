@@ -1,0 +1,42 @@
+addThree :: Int -> Int -> Int -> Int  --The return type is the last item in the declaration and the parameters are the first three.
+addThree x y z = x + y + z  
+
+addSame :: Int -> Int
+addSame x = x + x
+
+-- Int stands for integer. It's used for whole numbers. 7 can be an Int but 7.2 cannot. Int is bounded, which means that it has a minimum and a maximum value. Usually on 32-bit machines the maximum possible Int is 2147483647 and the minimum is -2147483648.
+-- Integer stands for, er … also integer. The main difference is that it's not bounded so it can be used to represent really really big numbers. I mean like really big. Int, however, is more efficient.
+factorial :: Integer -> Integer  
+factorial n = product [1..n] -- input: factorial 50, result: 30414093201713378043612608166064768844377641568960512000000000000
+
+-- Float is a real floating point with single precision.
+circumferenceFloat :: Float -> Float  
+circumferenceFloat r = 2 * pi * r  -- input: 4.0, output: 25.132742
+
+-- Double is a real floating point with double the precision!
+circumferenceDouble' :: Double -> Double  
+circumferenceDouble' r = 2 * pi * r  -- input: 4.0, output: 25.132741228718345
+
+
+-- Typeclasses are sets of types and Types are sets of values !!!!!!!!!!!!!!!
+-- Read is sort of the opposite typeclass of Show. The read function takes a string and returns a type which is a member of Read.
+-- ghci> read "True" || False  
+-- True  
+-- ghci> read "8.2" + 3.8  
+-- 12.0  
+-- ghci> read "5" - 2  
+-- 3  
+-- ghci> read "[1,2,3,4]" ++ [3]  
+-- [1,2,3,4,3]  
+
+-- Type annotations are a way of explicitly saying what the type of an expression should be. We do that by adding :: at the end of the expression and then specifying a type. 
+-- ghci> read "5" :: Int  
+-- 5  
+-- ghci> read "5" :: Float  
+-- 5.0  
+-- ghci> (read "5" :: Float) * 4  
+-- 20.0  
+-- ghci> read "[1,2,3,4]" :: [Int]  
+-- [1,2,3,4]  
+-- ghci> read "(3, 'a')" :: (Int, Char)  
+-- (3, 'a')  
