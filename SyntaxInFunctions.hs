@@ -28,3 +28,9 @@ second :: (a, b, c) -> b
 second (_, y, _) = y
 third :: (a, b, c) -> c
 third (_, _, z) = z
+
+
+-- My own implementation of the head function.
+head' :: [a] -> a  
+head' [] = error "Cant call head on an empty list, dummy!"  
+head' (x:_) = x
